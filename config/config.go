@@ -1,4 +1,3 @@
-// load config file to golang structs
 package config
 
 import (
