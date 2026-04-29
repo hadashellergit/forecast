@@ -1,0 +1,12 @@
+db:
+  dsn: "postgres://kfc:kfc@db:5432/kfc?sslmode=disable" 
+  # dsn: "postgres://kfc:kfc@localhost:5432/kfc?sslmode=disable"
+
+scheduler:
+  run_at: "0 2 * * *"
+
+forecast:
+  lookback_days: 7
+
+server:
+  addr: ":8080"

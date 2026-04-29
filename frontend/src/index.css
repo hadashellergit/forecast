@@ -1,0 +1,57 @@
+/* index.css — KFC Forecast design system
+   Aesthetic: industrial fast-food operations dashboard
+   Palette: deep crimson + warm black + bone white + amber accent
+   Typography: Bebas Neue (display) + DM Sans (body)
+*/
+
+:root {
+  --red:       #C8102E;
+  --red-dark:  #9B0B22;
+  --red-glow:  rgba(200, 16, 46, 0.25);
+  --black:     #0F0D0D;
+  --surface:   #1A1614;
+  --surface-2: #231E1C;
+  --surface-3: #2D2624;
+  --bone:      #F5EFE6;
+  --muted:     #8A7E78;
+  --amber:     #F5A623;
+  --amber-dim: rgba(245, 166, 35, 0.15);
+  --white:     #FFFFFF;
+
+  --font-display: 'Bebas Neue', 'Impact', sans-serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  --radius:   8px;
+  --radius-lg: 16px;
+  --shadow:   0 4px 24px rgba(0,0,0,0.5);
+  --shadow-red: 0 0 32px var(--red-glow);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--black);
+  color: var(--bone);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle noise texture overlay on body */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root { position: relative; z-index: 1; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--surface-3); border-radius: 3px; }

@@ -1,0 +1,54 @@
+.wrapper { display: flex; flex-direction: column; gap: 12px; }
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  background: var(--surface-2);
+  border: 1px solid var(--surface-3);
+  border-radius: var(--radius);
+  padding: 12px 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+  text-align: left;
+  min-width: 160px;
+}
+
+.card:hover {
+  border-color: var(--red);
+  background: var(--surface-3);
+}
+
+.active {
+  border-color: var(--red) !important;
+  background: var(--surface-3) !important;
+  box-shadow: var(--shadow-red);
+}
+
+.city {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--bone);
+}

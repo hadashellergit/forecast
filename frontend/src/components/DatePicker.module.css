@@ -1,0 +1,28 @@
+.wrapper { display: flex; flex-direction: column; gap: 12px; }
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.input {
+  background: var(--surface-2);
+  border: 1px solid var(--surface-3);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  color: var(--bone);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s;
+  color-scheme: dark;
+}
+
+.input:hover,
+.input:focus {
+  border-color: var(--red);
+}

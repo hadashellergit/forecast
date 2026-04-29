@@ -1,0 +1,54 @@
+.bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .bar { grid-template-columns: 1fr; }
+}
+
+.tile {
+  background: var(--surface);
+  border: 1px solid var(--surface-3);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left accent bar */
+.tile::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--surface-3);
+  border-radius: 3px 0 0 3px;
+  transition: background 0.2s;
+}
+
+.tile:first-child::before { background: var(--red); }
+
+.tileLabel {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.tileValue {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--bone);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.accent {
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
