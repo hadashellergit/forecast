@@ -35,6 +35,6 @@ The forecast table uses a composite primary key on `(store_id, product_id, forec
 
 ## What data is available
 
-The seed data covers 7 days of sales history. This means the only date that will have a forecast generated is tomorrow relative to when the scheduler runs — so in practice with this seed you will only see predictions around **April 30** (one day ahead of the seeded data window).
+The seed data covers 7 days of sales history. This means the only date that will have a forecast generated is tomorrow relative to when the scheduler runs — so in practice with this seed you will only see predictions around one day ahead of the seeded data window).
 
 Dates further out won't have forecasts because there is no sales history to average from. If you want to test more dates, you would need to generate additional seed data covering those time ranges.
